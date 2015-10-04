@@ -70,7 +70,7 @@ public class MazeDemo extends JFrame
 			readMaze = new Scanner(new File("maze.txt"));
 			
 			// Start the background music
-			playMusic("audio\\club_viridia.wav"); 
+			playMusic("audio/club_viridia.wav"); 
 			
 			// Set the height and width of the map based on the dimensions read in from the
 			// maze layout file
@@ -165,7 +165,7 @@ public class MazeDemo extends JFrame
 			// Display Dialog Screen
 			case 0:
 			{
-				stView.add(new JLabel(new ImageIcon("artwork\\dialog.jpg")));
+				stView.add(new JLabel(new ImageIcon("artwork/dialog.jpg")));
 				break;
 			}
 			
@@ -181,7 +181,7 @@ public class MazeDemo extends JFrame
 			// Display Victory Screen
 			case EXIT_REACHED:
 			{
-				stView.add(new JLabel(new ImageIcon("artwork\\forest_win.jpg")));
+				stView.add(new JLabel(new ImageIcon("artwork/forest_win.jpg")));
 				break;
 			}
 		}
@@ -297,9 +297,9 @@ public class MazeDemo extends JFrame
 			case '6':
 			case '7':
 			case '8':
-				return new JLabel(new ImageIcon("artwork\\player\\"+tileName+".png"));
+				return new JLabel(new ImageIcon("artwork/player/"+tileName+".png"));
 			default:
-				return new JLabel(new ImageIcon("artwork\\"+tileName+".png"));
+				return new JLabel(new ImageIcon("artwork/"+tileName+".png"));
 		}
 	}
 
@@ -377,7 +377,7 @@ public class MazeDemo extends JFrame
 						if(stModel[getPlayerY() - 1][getPlayerX()] == 'E')
 						{
 							updateStage(EXIT_REACHED);
-							playMusic("audio\\RaichuCry.wav");
+							playMusic("audio/RaichuCry.wav");
 							isDisabled = true;
 						}
 						else
@@ -401,7 +401,7 @@ public class MazeDemo extends JFrame
 						if(stModel[getPlayerY() + 1][getPlayerX()] == 'E')
 						{
 							updateStage(EXIT_REACHED);
-							playMusic("audio\\RaichuCry.wav");
+							playMusic("audio/RaichuCry.wav");
 							isDisabled = true;
 						}
 						else
@@ -423,7 +423,7 @@ public class MazeDemo extends JFrame
 						if(stModel[getPlayerY()][getPlayerX() - 1] == 'E')
 						{
 							updateStage(EXIT_REACHED);
-							playMusic("audio\\RaichuCry.wav");
+							playMusic("audio/RaichuCry.wav");
 							isDisabled = true;
 						}
 						else
@@ -445,7 +445,7 @@ public class MazeDemo extends JFrame
 						if(stModel[getPlayerY()][getPlayerX() + 1] == 'E')
 						{
 							updateStage(EXIT_REACHED);
-							playMusic("audio\\RaichuCry.wav");
+							playMusic("audio/RaichuCry.wav");
 							isDisabled = true;
 						}
 						else
